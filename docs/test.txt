@@ -1,0 +1,23 @@
+Import
+Task 1.1: Import the CSV file data/brasil-real-estate-1.csv into the DataFrame df1.
+Task 1.2: Drop all rows with NaN values from the DataFrame df1.
+Task 1.3: Use the "lat-lon" column to create two separate columns in df1: "lat" and "lon". Make sure that the data type for these new columns is float.
+Task 1.4: Use the "place_with_parent_names" column to create a "state" column for df1. (Note that the state name always appears after "|Brasil|" in each string.)
+Task 1.5: Transform the "price_usd" column of df1 so that all values are floating-point numbers instead of strings.
+Task 1.6: Drop the "lat-lon" and "place_with_parent_names" columns from df1.
+Task 1.7: Import the CSV file brasil-real-estate-2.csv into the DataFrame df2.
+Task 1.8: Use the "price_brl" column to create a new column named "price_usd". (Keep in mind that, when this data was collected in 2015 and 2016, a US dollar cost 3.19 Brazilian reals.)
+Task 1.9: Drop the "price_brl" column from df2, as well as any rows that have NaN values.
+Task 1.10: Concatenate df1 and df2 to create a new DataFrame named df.
+
+
+Explore
+Task 1.11: Use the describe method to create a DataFrame summary_stats with the summary statistics for the "area_m2" and "price_usd" columns.
+Task 1.12: Create a histogram of "price_usd". Make sure that the x-axis has the label "Price [USD]", the y-axis has the label "Frequency", and the plot has the title "Distribution of Home Prices". Use Matplotlib (plt).
+Task 1.13: Create a horizontal boxplot of "area_m2". Make sure that the x-axis has the label "Area [sq meters]" and the plot has the title "Distribution of Home Sizes". Use Matplotlib (plt).
+Task 1.14: Use the groupby method to create a Series named mean_price_by_region that shows the mean home price in each region in Brazil, sorted from smallest to largest.
+Task 1.15: Use mean_price_by_region to create a bar chart. Make sure you label the x-axis as "Region" and the y-axis as "Mean Price [USD]", and give the chart the title "Mean Home Price by Region". Use pandas.
+Task 1.16: Create a DataFrame df_south that contains all the homes from df that are in the "South" region.
+Task 1.17: Use the value_counts method to create a Series homes_by_state that contains the number of properties in each state in df_south.
+Task 1.18: Create a scatter plot showing price vs. area for the state in df_south that has the largest number of properties. Be sure to label the x-axis "Area [sq meters]" and the y-axis "Price [USD]"; and use the title "<name of state>: Price vs. Area". Use Matplotlib (plt).
+Task 1.19: Create a dictionary south_states_corr, where the keys are the names of the three states in the "South" region of Brazil, and their associated values are the correlation coefficient between "area_m2" and "price_usd" in that state.
